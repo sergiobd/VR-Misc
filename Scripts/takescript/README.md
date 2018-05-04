@@ -43,7 +43,7 @@ If you set the copy flag, which you should do only after checking take integrity
 ## Usage
 ### Check integrity
 
-./takify.sh <InputFolder>
+`./takify.sh <InputFolder>`
 
 In this usage, the script will make a summary of your folder structure. This is an example of the text output:
 
@@ -95,7 +95,7 @@ Note that sphere0 has 4 cameras and seven takes. There are 7 files in each cam f
 
 Add the "c" character to tell the script to copy files. 
 
-./takify.sh <InputFolder> c
+`./takify.sh <InputFolder> c`
 
 * Please note that the "Takes" folder will be at the same level of your ProjectName folder. 
 * The copy process is non-destructive. However, please make sure you have made a backup of your files before running this script.
