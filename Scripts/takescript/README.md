@@ -4,6 +4,7 @@ This script allows to copy the files from a multi-cam shot (usually from a 360 v
 ##  Input structure
 Your input should be a folder organized by shot names (which I am calling "spheres" in the script), and then by cameras:
 
+```
 - ProjectName
   \_ ShotName1
 	 \_ Cam1
@@ -18,10 +19,12 @@ Your input should be a folder organized by shot names (which I am calling "spher
 		  ...
    \_ ShotName2
 	 ...
+```
 
 ## Output structure
 If you set the copy flag, which you should do only after checking take integrity (see usage below), the script will make a copy of your files into a folder structured by *takes*, which is more convenient for stitching or processing. The output structure will be as follows:
 
+```
 -Takes
 	\_ ShotName1
 		\_ Take1
@@ -35,6 +38,7 @@ If you set the copy flag, which you should do only after checking take integrity
 			  ...
 	   \_ ShotName2
 		 ...
+```
 
 ## Usage
 ### Check integrity
@@ -77,12 +81,15 @@ Integrity:  // ----> You should check this section before copying!
 
 SPHERENUM  NUMCAMERAS  TAKES  NAME
 
-0    4    7777    Avion1Cabina     // ---> Note that sphere0 has 4 cameras and seven takes. There are 7 files in each cam folder 
-								   //      and hence there is 7777. If you see 7677, it means cam2 likely did not start in one of
-1    4    4444    Avion1Ejecutiva  //	   the takes. You should manually delete this take from all folders before copying.
+0    4    7777    Avion1Cabina     
+								   
+1    4    4444    Avion1Ejecutiva  
 
 It appears you have  4  cameras
 ```
+
+Note that sphere0 has 4 cameras and seven takes. There are 7 files in each cam folder and hence there is 7777. If you see 7677, it means cam2 likely did not start in one of the takes. You should manually delete this take from all folders before copying.
+
 
 ### Check integrity and copy files
 
